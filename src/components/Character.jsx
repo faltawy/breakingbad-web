@@ -8,7 +8,7 @@ function Character({ name, nickname, img }) {
                     src={img} />
             </div>
             <div>
-                <h3 className='text-primary flex items-center justify-center flex-wrap gap-1'><span>{name}</span>|<span className='font-semibold'>{nickname}</span></h3>
+                <h3  className='text-primary flex items-center justify-center flex-wrap gap-1'><span>{name}</span>|<span className='font-semibold'>{nickname}</span></h3>
             </div>
         </div>
     )
