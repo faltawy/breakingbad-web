@@ -3,3 +3,21 @@
 @tailwind components;
 
 @tailwind utilities;
+
+
+html {
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    @apply bg-primary text-white
+}
+
+.active {
+    box-shadow:0 -5px rgb(27, 165, 124) inset,0 -3px rgba(27, 165, 124, 0.534) inset;
+}
+
+.active:hover{
+    box-shadow: none;
+}

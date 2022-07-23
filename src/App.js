@@ -1,34 +1,21 @@
-import React from 'react';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import NotFound from './pages/NotFound';
+import '@fontsource/roboto';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Characters from './pages/Characters';
 
 function App() {
   return (
-    <div className="flex flex-col h-full items-center justify-center bg-gray-200 text-gray-700">
-      <div className="flex items-center">
-        <h1 className="text-6xl font-thin tracking-wider">Create React App + Tailwind CSS</h1>
-      </div>
-      <p className="my-6 tracking-wide">
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <div className="mt-6 flex justify-center">
-        <a
-          className="uppercase hover:underline"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="ml-10 uppercase hover:underline"
-          href="https://tailwindcss.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Tailwind
-        </a>
-      </div>
-    </div>
-  );
+    <Routes>
+      <Route path='' exact element={<Layout />}>
+        <Route path='/' element={<Home />} />
+        <Route path='/characters' element={<Characters />} />
+      </Route>
+      <Route path='*' element={<NotFound />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App
