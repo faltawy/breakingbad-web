@@ -19,6 +19,7 @@ function SocialLink({ icon, path }) {
     )
 }
 function Header({ loading }) {
+    console.log(loading);
     return (
         <header className='w-full h-[35px] flex items-center justify-between px-1.5 bg-primary'>
             <Logo />

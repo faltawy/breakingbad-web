@@ -12,7 +12,7 @@ function Layout() {
 
     return (
         <loadingContext.Provider value={{ loading, setLoading }}>
-            <div style={{ backgroundImage: `url(${BG})`, backgroundSize: '100% 100%' }} className="w-screen flex-col flex items-center gap-5 overflow-auto bg-no-repeat h-screen bg-scroll bg-left-bottom">
+            <div style={{ backgroundImage: `url(${BG})`}} className="w-screen flex-col flex bg-cover items-center gap-5 overflow-auto bg-no-repeat h-screen bg-scroll bg-left-bottom">
                 <Header loading={loading} />
                 <main className='flex-1 w-full overflow-auto gap-5 p-1 flex flex-row items-start justify-between'>
                     <Aside />

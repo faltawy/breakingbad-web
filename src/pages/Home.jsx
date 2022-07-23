@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>nothing here yet (hit characters)</div>
   )
 }
 
