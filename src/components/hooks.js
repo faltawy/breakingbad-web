@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState,useMemo } from "react"
 
 export function useToggle(init) {
     const [state, setState] = useState(init)
@@ -13,8 +13,8 @@ export function useFetch(setLoading, axiosReq) {
     const [errors, setError] = useState(null)
     useEffect(() => {
         setLoading(true)
-        axiosReq.then(response => { setData(response.data) }).catch((error) => { setError(error) }).finally(() => { setLoading(false) })
+        axiosReq.then(response => { response.data && setData(response.data) }).catch((error) => { setError(error) }).finally(() => { setLoading(false) })
         setLoading(false)
-    })
+    }, [])
     return [data, errors]
 }
