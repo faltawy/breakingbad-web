@@ -1,4 +1,4 @@
-import { useEffect, useState,useMemo } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function useToggle(init) {
     const [state, setState] = useState(init)
@@ -6,6 +6,17 @@ export function useToggle(init) {
         setState(!state)
     }
     return [state, toggle]
+}
+
+export function useCopy() {
+    const ref = useRef()
+    const [isCopid, setCopid] = useState(false)
+    function copy() {
+        navigator.clipboard.writeText(ref.current.innerHTML).then(() => {
+            setCopid(true)
+        });
+    }
+    return [ref, copy,isCopid]
 }
 
 export function useFetch(setLoading, axiosReq) {

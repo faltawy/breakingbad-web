@@ -3,12 +3,10 @@ import { FaGithub, FaTwitter } from 'react-icons/fa'
 import Logo from './Logo'
 import SearchOverlay from './SearchOverlay'
 
-
 const socialLinks = [
     { path: 'https://github.com/ah7255703', icon: <FaGithub /> },
     { path: 'https://twitter.com/ah7255', icon: <FaTwitter /> },
 ]
-
 
 function SocialLink({ icon, path }) {
     return (
@@ -19,7 +17,6 @@ function SocialLink({ icon, path }) {
     )
 }
 function Header({ loading }) {
-    console.log(loading);
     return (
         <header className='w-full h-[35px] flex items-center justify-between px-1.5 bg-primary'>
             <Logo />
