@@ -28,7 +28,7 @@ function Header({ loading }) {
                 }
             </div>
             <div className='flex items-center justify-between gap-2'>
-                <span className={`animate-spin ${!loading && 'opacity-0'} transition-all border-4 border-t-transparent border-white w-[30px] rounded-full h-[30px]`}></span>
+                <span className={`animate-spin ${!loading && 'opacity-0'} z-10 transition-all border-4 border-t-transparent border-white w-[30px] rounded-full h-[30px]`}></span>
                 <SearchOverlay />
             </div>
         </header>

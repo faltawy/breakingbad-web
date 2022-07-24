@@ -9,10 +9,10 @@ function NotFound() {
                 <div className='flex items-center flex-col gap-4'>
                     <h1 className='text-3xl font-bold'>404 Not Found</h1>
                     <div>
-                        <img src={WalterWhite} alt="" />
+                        <img className='invert' src={WalterWhite} alt="" />
                     </div>
                     <div>
-                        <button className='bg-slate-500 text-white uppercase py-2 px-3' onClick={()=>{navigate(-1)}}>Go Back</button>
+                        <button className='bg-primary text-white uppercase py-2 px-3' onClick={()=>{navigate(-1)}}>Go Back</button>
                     </div>
                 </div>
             </div>

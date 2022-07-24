@@ -21,10 +21,9 @@ function AdvQuote({ quote }) {
     )
 }
 
-
 function Quotes() {
     const [quotes, setQuotes] = useState(null)
-    const { setLoading, loading } = useContext(loadingContext)
+    const { setLoading } = useContext(loadingContext)
 
     useEffect(() => {
         setLoading(true)
