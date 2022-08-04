@@ -19,10 +19,10 @@ function Characters() {
     return (
         <React.Fragment>
             <Helmet>
-                <title>Characters</title>
+                <title>BreakingBad | Characters</title>
             </Helmet>
             <div className='container mx-auto flex flex-col items-start gap-2'>
-                <h1 className='font-bold text-xl sticky top-0 right-0 z-[10] leading-tight text-primary bg-white p-1.5 rounded'>All Characters</h1>
+                <h1 style={{opacity:data?'1':'0',transition:'opacity ease .5s'}} className='font-bold text-xl sticky top-0 right-0 z-[10] leading-tight text-primary bg-white p-1.5 rounded'>All Characters</h1>
                 <div className="container mx-auto">
                     {
                         activeChar && <CharacterOverlay setActiveChar={setActiveChar} char={activeChar} />
@@ -32,7 +32,7 @@ function Characters() {
                             ?
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 place-items-center gap-5">
                                 {data.map((char, index) => {
-                                    return <Character setActiveChar={setActiveChar} char={char} key={index} />
+                                    return <Character setActiveChar={setActiveChar} char={char} key={index} animationDelay={index * 120 +'ms'} />
                                 })}
                             </div>
                             : !loading && errors && <Error />

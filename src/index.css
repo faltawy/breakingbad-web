@@ -11,7 +11,7 @@ html {
 }
 
 *::selection {
-    @apply bg-primary text-white
+    @apply bg-primary text-white;
 }
 
 .active {
@@ -35,5 +35,23 @@ html {
 
 ::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 5px 5px rgb(0, 165, 116);
-    @apply rounded-full opacity-20 hover:opacity-100
+    @apply rounded-full opacity-20 hover:opacity-100;
+}
+
+
+
+@keyframes show_charcter {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        display: flex;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.show_char {
+    animation: show_charcter .5s ease forwards 1;
 }
